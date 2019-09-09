@@ -1,0 +1,981 @@
+<!--
+Johu 2019/5/25 10:06:11.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加简历</title>
+
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <link href="../css/sb-admin-2.min.css" rel="stylesheet">
+
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">-->
+
+    <link href="../css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+</head>
+<body>
+
+<div class="mynav">
+    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+
+        <!-- Topbar Navbar -->
+        <ul class="navbar-nav ml-auto">
+
+            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+            <li class="nav-item dropdown no-arrow d-sm-none">
+
+                <!-- Dropdown - Messages -->
+                <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                     aria-labelledby="searchDropdown">
+                    <form class="form-inline mr-auto w-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                   aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </li>
+
+            <!-- Nav Item - Alerts -->
+            <li class="nav-item dropdown no-arrow mx-1">
+                <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-bell fa-fw"></i>
+
+                    <span>我的通知</span>
+                    <!-- Counter - Alerts -->
+                    <!--<span class="badge badge-danger badge-counter">3+</span>-->
+                </a>
+                <!-- Dropdown - Alerts -->
+                <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                     aria-labelledby="alertsDropdown">
+                    <h6 class="dropdown-header">
+                        Alerts Center
+                    </h6>
+                    <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="mr-3">
+                            <div class="icon-circle bg-primary">
+                                <i class="fas fa-file-alt text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="small text-gray-500">December 12, 2019</div>
+                            <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                        </div>
+                    </a>
+                    <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="mr-3">
+                            <div class="icon-circle bg-success">
+                                <i class="fas fa-donate text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="small text-gray-500">December 7, 2019</div>
+                            $290.29 has been deposited into your account!
+                        </div>
+                    </a>
+                    <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="mr-3">
+                            <div class="icon-circle bg-warning">
+                                <i class="fas fa-exclamation-triangle text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="small text-gray-500">December 2, 2019</div>
+                            Spending Alert: We've noticed unusually high spending for your account.
+                        </div>
+                    </a>
+                    <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                </div>
+            </li>
+
+            <!-- Nav Item - Messages -->
+            <li class="nav-item dropdown no-arrow mx-1">
+                <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-envelope fa-fw"></i>
+
+                    <span>我的私信</span>
+                    <!-- Counter - Messages -->
+                    <!--<span class="badge badge-danger badge-counter">7</span>-->
+                </a>
+                <!-- Dropdown - Messages -->
+                <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                     aria-labelledby="messagesDropdown">
+                    <h6 class="dropdown-header">
+                        Message Center
+                    </h6>
+                    <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="dropdown-list-image mr-3">
+                            <img class="rounded-circle" src="https://source.unsplash.com/fn_BT9fwg_E/60x60" alt="">
+                            <div class="status-indicator bg-success"></div>
+                        </div>
+                        <div class="font-weight-bold">
+                            <div class="text-truncate">Hi there! I am wondering if you can help me with a problem I've
+                                been having.
+                            </div>
+                            <div class="small text-gray-500">Emily Fowler · 58m</div>
+                        </div>
+                    </a>
+                    <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="dropdown-list-image mr-3">
+                            <img class="rounded-circle" src="https://source.unsplash.com/AU4VPcFN4LE/60x60" alt="">
+                            <div class="status-indicator"></div>
+                        </div>
+                        <div>
+                            <div class="text-truncate">I have the photos that you ordered last month, how would you like
+                                them sent to you?
+                            </div>
+                            <div class="small text-gray-500">Jae Chun · 1d</div>
+                        </div>
+                    </a>
+                    <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="dropdown-list-image mr-3">
+                            <img class="rounded-circle" src="https://source.unsplash.com/CS2uCrpNzJY/60x60" alt="">
+                            <div class="status-indicator bg-warning"></div>
+                        </div>
+                        <div>
+                            <div class="text-truncate">Last month's report looks great, I am very happy with the
+                                progress so far, keep up the good work!
+                            </div>
+                            <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                        </div>
+                    </a>
+                    <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="dropdown-list-image mr-3">
+                            <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60" alt="">
+                            <div class="status-indicator bg-success"></div>
+                        </div>
+                        <div>
+                            <div class="text-truncate">Am I a good boy? The reason I ask is because someone told me that
+                                people say this to all dogs, even if they aren't good...
+                            </div>
+                            <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                        </div>
+                    </a>
+                    <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+                </div>
+            </li>
+
+
+            <div class="topbar-divider d-none d-sm-block"></div>
+
+
+            <li class="nav-item dropdown no-arrow mx-1">
+                <a class="nav-link dropdown-toggle" href="#" id="usersDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user fa-fw"></i>
+
+                    <span>我的</span>
+                    <!-- Counter - Messages -->
+                    <!--<span class="badge badge-danger badge-counter">7</span>-->
+                </a>
+                <!-- Dropdown - user -->
+                <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                     aria-labelledby="messagesDropdown">
+                    <h6 class="dropdown-header">
+                        Message Center
+                    </h6>
+                    <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="dropdown-list-image mr-3">
+                            <img class="rounded-circle" src="https://source.unsplash.com/fn_BT9fwg_E/60x60" alt="">
+                            <div class="status-indicator bg-success"></div>
+                        </div>
+                        <div class="font-weight-bold">
+                            <div class="text-truncate">Hi there! I am wondering if you can help me with a problem I've
+                                been having.
+                            </div>
+                            <div class="small text-gray-500">Emily Fowler · 58m</div>
+                        </div>
+                    </a>
+                    <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="dropdown-list-image mr-3">
+                            <img class="rounded-circle" src="https://source.unsplash.com/AU4VPcFN4LE/60x60" alt="">
+                            <div class="status-indicator"></div>
+                        </div>
+                        <div>
+                            <div class="text-truncate">I have the photos that you ordered last month, how would you like
+                                them sent to you?
+                            </div>
+                            <div class="small text-gray-500">Jae Chun · 1d</div>
+                        </div>
+                    </a>
+                    <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="dropdown-list-image mr-3">
+                            <img class="rounded-circle" src="https://source.unsplash.com/CS2uCrpNzJY/60x60" alt="">
+                            <div class="status-indicator bg-warning"></div>
+                        </div>
+                        <div>
+                            <div class="text-truncate">Last month's report looks great, I am very happy with the
+                                progress so far, keep up the good work!
+                            </div>
+                            <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                        </div>
+                    </a>
+                    <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="dropdown-list-image mr-3">
+                            <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60" alt="">
+                            <div class="status-indicator bg-success"></div>
+                        </div>
+                        <div>
+                            <div class="text-truncate">Am I a good boy? The reason I ask is because someone told me that
+                                people say this to all dogs, even if they aren't good...
+                            </div>
+                            <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                        </div>
+                    </a>
+                    <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+                </div>
+            </li>
+
+
+        </ul>
+
+    </nav>
+
+</div>
+<div class="mycontent">
+    <div class="d-flex flex-column">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="container">
+
+                    <!-- Content Column -->
+                    <div class="card shadow mb-4">
+
+                        <!-- Card Header - Accordion -->
+                        <a href="#collapseCardExample1" class="d-block card-header py-3" data-toggle="collapse"
+                           role="button"
+                           aria-expanded="true" aria-controls="collapseCardExample1">
+                            <h6 class="m-0 font-weight-bold text-primary">应聘信息</h6>
+                        </a>
+
+
+                        <!-- Card Content - Collapse -->
+                        <div class="collapse show" id="collapseCardExample1" style="">
+
+
+                            <div class="card-body row">
+
+
+                                <div class="col-lg-6 row">
+
+                                    <div class="col-lg-5 text-right">请选择应聘岗位类型:</div>
+
+                                    <div class="col-lg-7">
+                                        <select class="form-control">
+                                            <option>社会招聘</option>
+                                            <option>日常实习</option>
+                                            <option>暑期实习</option>
+                                            <option>校园招聘</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-6 row">
+
+                                    <div class="col-lg-5 text-right">请选择应聘职位类型:</div>
+
+                                    <div class="col-lg-7">
+                                        <select class="form-control">
+                                            <option>技术类</option>
+                                            <option>产品类</option>
+                                            <option>设计类</option>
+                                            <option>市场/职能类</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-body row">
+
+                                <div class="col-lg-6 row">
+                                    <div class="col-lg-5 text-right">第一志愿：</div>
+
+                                    <div class="col-lg-7">
+
+                                        <select class="form-control">
+                                            <option selected>请选择应聘职位</option>
+                                            <option>web前端</option>
+                                            <option>产品经理</option>
+                                            <option>设计总监</option>
+                                            <option>市场总监</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-6 row">
+                                    <div class="col-lg-5 text-right">第二志愿：</div>
+
+                                    <div class="col-lg-7">
+
+                                        <select class="form-control">
+                                            <option selected>请选择应聘职位</option>
+                                            <option>web前端</option>
+                                            <option>产品经理</option>
+                                            <option>设计总监</option>
+                                            <option>市场总监</option>
+                                        </select>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="card-body row">
+
+                                <div class="col-lg-6 row">
+                                    <div class="col-lg-5 text-right">是否接受调剂：</div>
+
+                                    <div class="col-lg-7">
+
+                                        <select class="form-control">
+                                            <option selected>是</option>
+                                            <option>否</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="card shadow mb-4">
+
+                        <!-- Card Header - Accordion -->
+                        <a href="#collapseCardExample2" class="d-block card-header py-3" data-toggle="collapse"
+                           role="button"
+                           aria-expanded="true" aria-controls="collapseCardExample2">
+                            <h6 class="m-0 font-weight-bold text-primary">个人信息</h6>
+                        </a>
+
+
+                        <!-- Card Content - Collapse -->
+                        <div class="collapse show" id="collapseCardExample2" style="">
+
+                            <div class="card-body row">
+
+                                <div class="col-lg-6 row">
+                                    <div class="col-lg-5 text-right">请输入你的姓名：</div>
+
+                                    <div class="col-lg-7">
+
+                                        <input type="text" class="form-control form-control-user"
+                                               aria-describedby="emailHelp"
+                                               placeholder="请输入你的姓名">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 row">
+                                    <div class="col-lg-5 text-right">请输入你的性别：</div>
+
+                                    <div class="col-lg-7">
+
+                                        <select class="form-control">
+                                            <option selected>男</option>
+                                            <option>女</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-body row">
+                                <div class="col-lg-6 row">
+                                    <div class="col-lg-5 text-right">请输入你的年龄：</div>
+
+                                    <div class="col-lg-7">
+
+                                        <select class="form-control">
+                                            <option selected>请输入年龄</option>
+                                            <option>18</option>
+                                            <option value="">19</option>
+                                            <option value="">20</option>
+                                            <option value="">21</option>
+                                            <option value="">22</option>
+                                            <option value="">23</option>
+                                            <option value="">24</option>
+                                            <option value="">25</option>
+                                            <option value="">26</option>
+                                            <option value="">27</option>
+                                            <option value="">28</option>
+
+                                        </select>
+                                    </div>
+
+
+                                </div>
+                                <div class="col-lg-6 row">
+                                    <div class="col-lg-5 text-right">请输入你的身份证号码：</div>
+
+                                    <div class="col-lg-7">
+
+                                        <input id=idCard type="text" class="form-control form-control-user"
+                                               aria-describedby="emailHelp"
+                                               placeholder="请输入你的身份证号码">
+                                    </div>
+                                    <span id="idCard-title" class="fa-pull-right"
+                                          style="color: red;margin-left: 50px;display: none">请输入正确的身份证号码</span>
+                                </div>
+
+
+                            </div>
+
+                            <div class="card-body row">
+
+                                <div class="col-lg-6 row">
+                                    <div class="col-lg-5 text-right">请输入你的电话号码：</div>
+
+                                    <div class="col-lg-7">
+
+                                        <input id="phoneNum" type="text" class="form-control form-control-user"
+                                               aria-describedby="emailHelp"
+                                               placeholder="请输入你的电话号码">
+                                    </div>
+                                    <span id="phoneNum-title" class="fa-pull-right"
+                                          style="color: red;margin-left: 50px;display: none">请输入正确的电话号码</span>
+
+
+                                </div>
+                                <div class="col-lg-6 row">
+                                    <div class="col-lg-5 text-right">当前就读院校：</div>
+
+                                    <div class="col-lg-7">
+
+                                        <input type="text" class="form-control form-control-user"
+                                               aria-describedby="emailHelp"
+                                               placeholder="当前就读院校">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-body row">
+
+
+                                <div class="col-lg-6 row">
+                                    <div class="col-lg-5 text-right">选择入学日期：</div>
+
+                                    <div class="col-lg-7">
+
+                                        <div class="input-group date form_date" data-date=""
+                                             data-date-format="dd MM yyyy"
+                                             data-link-field="dtp_input2" data-link-format="yyyy-mm-dd"
+                                             aria-placeholder="">
+
+                                            <input class="form-control" size="16" type="text" value="" readonly=""
+                                                   placeholder="选择入学日期">
+                                            <span class="input-group-addon"><span
+                                                    class="glyphicon glyphicon-remove"></span></span>
+                                            <span class="input-group-addon"><span
+                                                    class="glyphicon glyphicon-calendar"></span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 row">
+                                    <div class="col-lg-5 text-right">选择英语等级：</div>
+                                    <div class="col-lg-7">
+                                        <select class="form-control">
+                                            <option>四级</option>
+                                            <option>六级</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow mb-4">
+
+                        <!-- Card Header - Accordion -->
+                        <a href="#collapseCardExample3" class="d-block card-header py-3" data-toggle="collapse"
+                           role="button"
+                           aria-expanded="true" aria-controls="collapseCardExample3">
+                            <h6 class="m-0 font-weight-bold text-primary">教育背景</h6>
+                        </a>
+                        <!-- Card Content - Collapse -->
+                        <div class="collapse show" id="collapseCardExample3" style="">
+                            <div class="card-body row">
+                                <div class="col-lg-9"></div>
+                                <div class="row col-lg-3">
+
+                                    <a href="javascript:;" class="btn btn-primary btn-icon-split"
+                                       style="margin-right: 30px;">
+                                        <span class="icon text-white-50">
+                                          <i class="fas fa-plus"></i>
+                                        </span>
+                                        <span class="text">添加</span>
+                                    </a>
+
+                                    <a href="javascript:;" class="btn btn-danger btn-icon-split">
+                                    <span class="icon text-white-50">
+                                      <i class="fas fa-trash"></i>
+                                    </span>
+                                        <span class="text">删除</span>
+                                    </a>
+
+                                </div>
+
+
+                            </div>
+                            <div class="card-body row">
+
+
+                                <div class="col-lg-6 row">
+                                    <div class="col-lg-5 text-right">选择当前学历：</div>
+
+                                    <div class="col-lg-7">
+
+                                        <select class="form-control">
+                                            <option>本科</option>
+                                            <option>硕士</option>
+                                            <option>博士</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 row">
+                                    <div class="col-lg-5 text-right">选择起始时间：</div>
+
+                                    <div class="col-lg-7">
+
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="input-group date form_date" data-date=""
+                                                     data-date-format="yyyy MM dd" data-link-field="dtp_input2"
+                                                     data-link-format="yyyy-mm-dd" aria-placeholder="">
+
+                                                    <input class="form-control" size="16" type="text" value=""
+                                                           readonly=""
+                                                           placeholder="学历开始时间">
+                                                    <span class="input-group-addon"><span
+                                                            class="glyphicon glyphicon-remove"></span></span>
+                                                    <span class="input-group-addon"><span
+                                                            class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="input-group date form_date" data-date=""
+                                                     data-date-format="yyyy MM dd" data-link-field="dtp_input2"
+                                                     data-link-format="yyyy-mm-dd" aria-placeholder="">
+
+                                                    <input class="form-control" size="16" type="text" value=""
+                                                           readonly=""
+                                                           placeholder="学历结束时间">
+                                                    <span class="input-group-addon"><span
+                                                            class="glyphicon glyphicon-remove"></span></span>
+                                                    <span class="input-group-addon"><span
+                                                            class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="card-body row">
+
+
+                                <div class="col-lg-6 row">
+                                    <div class="col-lg-5 text-right">输入你的毕业学校：</div>
+
+                                    <div class="col-lg-7">
+
+                                        <input type="text" class="form-control form-control-user"
+                                               aria-describedby="emailHelp" placeholder="请输入你的毕业学校">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 row">
+                                    <div class="col-lg-5 text-right">当前就读专业：</div>
+
+                                    <div class="col-lg-7">
+
+                                        <input type="text" class="form-control form-control-user"
+                                               aria-describedby="emailHelp" placeholder="当前就读专业">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-body row">
+
+                                <div class="col-lg-6 row">
+                                    <div class="col-lg-5 text-right">你的成绩排名：</div>
+
+                                    <div class="col-lg-7">
+
+                                        <input type="text" class="form-control form-control-user"
+                                               aria-describedby="emailHelp" placeholder="请输入你的成绩排名">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow mb-4">
+
+                        <!-- Card Header - Accordion -->
+                        <a href="#collapseCardExample4" class="d-block card-header py-3" data-toggle="collapse"
+                           role="button"
+                           aria-expanded="true" aria-controls="collapseCardExample4">
+                            <h6 class="m-0 font-weight-bold text-primary">实习经历</h6>
+                        </a>
+
+
+                        <!-- Card Content - Collapse -->
+                        <div class="collapse show" id="collapseCardExample4" style="">
+                            <div class="card-body row">
+                                <div class="col-lg-9"></div>
+                                <div class="row col-lg-3">
+
+                                    <a href="javascript:;" class="btn btn-primary btn-icon-split"
+                                       style="margin-right: 30px;">
+                                        <span class="icon text-white-50">
+                                          <i class="fas fa-plus"></i>
+                                        </span>
+                                        <span class="text">添加</span>
+                                    </a>
+
+                                    <a href="javascript:;" class="btn btn-danger btn-icon-split">
+                                    <span class="icon text-white-50">
+                                      <i class="fas fa-trash"></i>
+                                    </span>
+                                        <span class="text">删除</span>
+                                    </a>
+
+                                </div>
+
+                                <div class="card-body row">
+
+                                    <div class="col-lg-6 row">
+                                        <div class="col-lg-5 text-right">实习起始时间：</div>
+
+                                        <div class="col-lg-7">
+
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="input-group date form_date" data-date=""
+                                                         data-date-format="yyyy MM dd" data-link-field="dtp_input2"
+                                                         data-link-format="yyyy-mm-dd" aria-placeholder="">
+
+                                                        <input class="form-control" size="16" type="text" value=""
+                                                               readonly="" placeholder="实习开始时间">
+                                                        <span class="input-group-addon"><span
+                                                                class="glyphicon glyphicon-remove"></span></span>
+                                                        <span class="input-group-addon"><span
+                                                                class="glyphicon glyphicon-calendar"></span></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="input-group date form_date" data-date=""
+                                                         data-date-format="yyyy MM dd" data-link-field="dtp_input2"
+                                                         data-link-format="yyyy-mm-dd" aria-placeholder="">
+
+                                                        <input class="form-control" size="16" type="text" value=""
+                                                               readonly="" placeholder="实习结束时间">
+                                                        <span class="input-group-addon"><span
+                                                                class="glyphicon glyphicon-remove"></span></span>
+                                                        <span class="input-group-addon"><span
+                                                                class="glyphicon glyphicon-calendar"></span></span>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 row">
+                                        <div class="col-lg-5 text-right">公司名称：</div>
+
+                                        <div class="col-lg-7">
+
+                                            <input type="email" class="form-control form-control-user"
+                                                   aria-describedby="emailHelp"
+                                                   placeholder="请输入公司名称">
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="card-body row">
+
+                                    <div class="col-lg-6 row">
+                                        <div class="col-lg-5 text-right">实习职位：</div>
+
+                                        <div class="col-lg-7">
+
+                                            <div class="form-group">
+                                                <input type="email" class="form-control form-control-user"
+                                                       aria-describedby="emailHelp"
+                                                       placeholder="请输入实习职位">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 row">
+                                        <div class="col-lg-5 text-right">公司部门：</div>
+
+                                        <div class="col-lg-7">
+
+                                            <input type="email" class="form-control form-control-user"
+                                                   aria-describedby="emailHelp"
+                                                   placeholder="请输入公司部门">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="card-body row">
+
+                                    <div class="col-lg-6 row">
+                                        <div class="col-lg-5 text-right">岗位职责：</div>
+
+                                        <div class="col-lg-7">
+
+                                            <div class="form-group">
+                                                <textarea class="form-control" rows="3"
+                                                          placeholder="请输入岗位职责"></textarea>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 row">
+                                        <div class="col-lg-5 text-right">实习项目：</div>
+
+                                        <div class="col-lg-7">
+
+                                            <input type="email" class="form-control form-control-user"
+                                                   aria-describedby="emailHelp"
+                                                   placeholder="请输入实习项目">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow mb-4">
+
+                        <!-- Card Header - Accordion -->
+                        <a href="#collapseCardExample5" class="d-block card-header py-3" data-toggle="collapse"
+                           role="button"
+                           aria-expanded="true" aria-controls="collapseCardExample5">
+                            <h6 class="m-0 font-weight-bold text-primary">项目/科研经历</h6>
+                        </a>
+
+
+                        <!-- Card Content - Collapse -->
+                        <div class="collapse show" id="collapseCardExample5" style="">
+                            <div class="card-body row">
+                                <div class="col-lg-9"></div>
+                                <div class="row col-lg-3">
+
+                                    <a href="javascript:;" class="btn btn-primary btn-icon-split"
+                                       style="margin-right: 30px;">
+                                        <span class="icon text-white-50">
+                                          <i class="fas fa-plus"></i>
+                                        </span>
+                                        <span class="text">添加</span>
+                                    </a>
+
+                                    <a href="javascript:;" class="btn btn-danger btn-icon-split">
+                                    <span class="icon text-white-50">
+                                      <i class="fas fa-trash"></i>
+                                    </span>
+                                        <span class="text">删除</span>
+                                    </a>
+
+                                </div>
+
+                                <div class="card-body row">
+
+                                    <div class="col-lg-6 row">
+                                        <div class="col-lg-5 text-right">项目起始时间：</div>
+
+                                        <div class="col-lg-7">
+
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="input-group date form_date" data-date=""
+                                                         data-date-format="yyyy MM dd" data-link-field="dtp_input2"
+                                                         data-link-format="yyyy-mm-dd" aria-placeholder="">
+
+                                                        <input class="form-control" size="16" type="text" value=""
+                                                               readonly="" placeholder="项目开始时间">
+                                                        <span class="input-group-addon"><span
+                                                                class="glyphicon glyphicon-remove"></span></span>
+                                                        <span class="input-group-addon"><span
+                                                                class="glyphicon glyphicon-calendar"></span></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="input-group date form_date" data-date=""
+                                                         data-date-format="yyyy MM dd" data-link-field="dtp_input2"
+                                                         data-link-format="yyyy-mm-dd" aria-placeholder="">
+
+                                                        <input class="form-control" size="16" type="text" value=""
+                                                               readonly="" placeholder="项目结束时间">
+                                                        <span class="input-group-addon"><span
+                                                                class="glyphicon glyphicon-remove"></span></span>
+                                                        <span class="input-group-addon"><span
+                                                                class="glyphicon glyphicon-calendar"></span></span>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 row">
+                                        <div class="col-lg-5 text-right">项目名称：</div>
+
+                                        <div class="col-lg-7">
+
+                                            <div class="form-group">
+                                                <input type="email" class="form-control form-control-user"
+                                                       aria-describedby="emailHelp"
+                                                       placeholder="项目名称">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body row">
+
+                                    <div class="col-lg-6 row">
+                                        <div class="col-lg-5 text-right">项目职责：</div>
+
+                                        <div class="col-lg-7">
+
+                                            <div class="form-group">
+                                                <textarea class="form-control" rows="3"
+                                                          placeholder="请输入项目职责"></textarea>
+
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 row">
+                                        <div class="col-lg-5 text-right">项目简介：</div>
+
+                                        <div class="col-lg-7">
+
+                                            <textarea class="form-control" rows="3" placeholder="请输入项目简介"></textarea>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="container text-center row col-lg-12" style="margin-bottom: 30px;">
+                        <div class="col-lg-6">
+                            <a href="../houtai/resumelookd.html" class="btn btn-success btn-icon-split">
+                                <span class="icon text-white-50">
+                                  <i class="fas fa-check"></i>
+                                </span>
+                                <span class="text">简历预览</span>
+                            </a>
+                        </div>
+                        <div class="col-lg-6">
+                            <a href="#" class="btn btn-primary btn-icon-split">
+                            <span class="icon text-white-50">
+                              <i class="fas fa-flag"></i>
+                            </span>
+                                <span class="text">提交简历</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript-->
+<script src="../vendor/jquery/jquery.min.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- Custom scripts for all pages-->
+<script src="../js/sb-admin-2.min.js"></script>
+
+<script type="text/javascript" src="../js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+<script>
+    $('.form_datetime').datetimepicker({
+        //language:  'fr',
+        weekStart: 1,
+        todayBtn: 1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        forceParse: 0,
+        showMeridian: 1
+    });
+    $('.form_date').datetimepicker({
+        language: 'fr',
+        weekStart: 1,
+        todayBtn: 1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        minView: 2,
+        forceParse: 0
+    });
+    $('.form_time').datetimepicker({
+        language: 'fr',
+        weekStart: 1,
+        todayBtn: 1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 1,
+        minView: 0,
+        maxView: 1,
+        forceParse: 0
+    });
+</script>
+
+<script>
+    $('#idCard').bind('input propertychange', function () {
+        var idCard = $('#idCard').val();
+        var reg = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
+        if (reg.test(idCard) === false) {
+            $('#idCard-title')[0].style.display = 'inline';
+            // console.log($('#idCard-title')[0]);
+        } else {
+            $('#idCard-title')[0].style.display = 'none';
+        }
+    });
+    $('#phoneNum').bind('input propertychange', function () {
+        var phoneNum = $('#phoneNum').val();
+        var reg = /^1[34578]\d{9}$/;
+        if (reg.test(phoneNum) === false) {
+            $('#phoneNum-title')[0].style.display = 'inline';
+            // console.log($('#idCard-title')[0]);
+        } else {
+            $('#phoneNum-title')[0].style.display = 'none';
+        }
+    });
+</script>
+
+
+</body>
+</html>
